@@ -1,2 +1,139 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Passenger Informatie: AMS - MARS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" >
+    <link rel="stylesheet" href="style.css" type="text/css" media="all">
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+
+
+    <header class="masthead clear">
+        <div class="site-header centered">
+            <div class="spacex-branding">
+                <img src="assets/images/spacex_logo_live.png" alt="">
+            </div>
+           
+        </div>
+
+    </header>
+
+  
+
+    <main class="main-area">
+
+        <div class="top centered">
+
+
+            <div class="dashboard column">
+                <div class="infobox spaceship">
+
+                        
+                    <div >
+                        <img class="icon" src="assets/images/spaceship.png" alt="">
+                    </div>
+
+                    <div class="infopane spaceship">
+                            <p> <span> <b>Your spaceship:</b><br></span> <span class="value_spaceship">XXXXX</p> </span></p>
+                            
+
+                            
+                    </div>
+                    <p> <span> <b>Fuel:</b></span> <span class="value_fuel">XXXXX</p> </span></p>
+                    <p> <span> <b>Throttle:</b></span> <span class="value_thr">XXXXX</p> </span></p>
+                    <p> <span> <b>Speed:</b></span> <span class="value_speed">XXXXX</p> </span></p>
+                    <p> <span> <b>G-force:</b></span> <span class="value_gforce">XXXXX</p> </span></p>
+
+
+                </div>
+
+                <div class="infobox journey">
+
+                 
+                    <div class="locationinfo">
+                        <h2>You are here</h2>
+
+                        <img src="assets/images/journeymap.png" alt="">
+                    </div>
+
+                    <div class="timeinfo">
+                            <h2>What time is it?</h2>
+                            <p> <span> <b>It is time to have</b></span> <span class="value_dayaction">XXXXX</p> </span></p>
+
+    
+                        </div>
+
+                    
+                    <div class="impactinfo">
+
+                        <h2>Time until impact</h2>
+                            <div class="eta-counter">
+                                <p><span class="value_days"></span> D</p>
+                                <p><span class="value_hours"></span> H</p>
+                                <p><span class="value_minutes"></span> M</p>
+                                <p><span class="value_secs"></span> S</p>
+                            </div>
+                    
+                        </div>    
+
+                </div>
+
+                <div class="infobox user">
+                    <div class="icon">
+                            <img src="assets/images/bulb.png" alt="">
+                        </div>
+                        <div class="infopanes">
+                            <div class="remainingfood">
+                                <p> <span>You have</span> <span class="value_foodtokens">XXXXX</span> food tokens and <span class="value_drinktokens">XXXXX</span> drink tokens left. </p>
+    
+                            </div>
+                            <div class="infopane food">
+                                    <p> <span> <b>Food:</b><br></span> <span class="value_foodie">XXXXX</p> </span></p>
+                                    
+                                        <div class="cta foodie">
+                                            <a href="#">Give me food!</a>
+                                        </div><!-- .cta -->
+                                
+
+                            </div>
+                            <div class="infopane drinks">
+                                    <p> <span> <b>Drinks:</b><br></span> <span class="value_drinks">XXXXX</p> </span></p>
+                                    <div class="cta drinks">
+                                        <a href="#">Give me drinks!</a>
+                                    </div><!-- .cta -->
+
+                                    
+                            </div>
+
+                            
+
+                        </div>
+
+                    
+                    </div>
+            </div>
+
+            
+            <div class="cta-box">
+                    <div class="cta exploremars">
+                        <a href="#">Show me what to do at MARS!</a>
+                    </div><!-- .cta -->
+                    </div>
+                    
+<!-- centered -->
+
+       
+    </main><!-- .main-area -->
+
+
+</body>
+
+</html>

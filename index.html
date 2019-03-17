@@ -32,17 +32,97 @@ modern look and feel.
 
 
 --> 
-
-
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>Template</title>
-		<link rel="stylesheet" type="text/css" href="styles/mystyle.css">
-		<script src="scripts/main.js" defer></script>
-	</head>
-	<body>
-		<h1>Webpage template</h1>
-	</body>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Passenger Informatie: AMS - MARS</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" >
+    <link rel="stylesheet" href="assets/styles/mystyle.css" type="text/css" media="all">
+</head>
+
+<body>
+
+
+    <header class="masthead clear">
+        <div class="site-header centered">
+            <div class="spacex-branding">
+                <img src="assets/images/spacex_logo_live.png" alt="">
+            </div>
+           
+        </div>
+
+    </header>
+
+  
+
+    <main class="main-area">
+
+        <div class="infodisplay">
+            <div class="headline">
+                <h3>MUSKTOWN, MARS</h>
+            </div>
+            <div class="flipclock">
+                <p><span class="digit hours">XX</span></p>
+                <p class="digit sep"><span class="digit sep"></span>:</p>
+                <p><span class="digit minutes">XX</span></p>
+                <p class="digit sep"><span class="digit sep"></span>:</p>
+                <p><span class="digit seconds">XX</span></p>
+
+            </div>
+
+
+            <div class="chatpanel">
+                <div class="bubble left" id="1">
+                    <p>Hey, where are you from?</p>
+                    <img src="assets/images/alien.png" alt="">
+
+                </div>
+
+                <div class="bubble right" id="2">
+                        <img src="assets/images/guy.png" alt="">
+                        <p>Amsterdam, Nederlands</p>
+                        
+
+    
+                    </div>
+                    <div class="bubble left" id="3">
+                            <p>The time in Amsterdam, Nederlands:</p>
+                            <img src="assets/images/alien.png" alt="">
+                        </div>
+
+                        <div class="flipclock small">
+                                <p><span class="utcdigit hours">XX</span></p>
+                                <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
+                                <p><span class="utcdigit minutes">XX</span></p>
+                                <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
+                                <p><span class="utcdigit seconds">XX</span></p>
+                
+                            </div>
+
+                
+                </div>
+
+
+        
+        
+        </div>
+
+        <div class="cta-box">
+               <div class="cta darkmode">
+                        <a href="#">Toggle Darkmode</a>
+                    </div>
+                </div>
+
+       
+    </main><!-- .main-area -->
+
+    <script src="assets/scripts/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+
+
+</body>
+
 </html>
