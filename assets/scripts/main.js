@@ -5,10 +5,16 @@ var timeInterval = setInterval(marsTime, 1000);
 var timeInterval = setInterval(utcTime, 1000);
 
 var runtime = 0; 
-var nightmode = 0; 
+var nightModeActive = 0; 
 
+backgrounds = ["dome.jpg", "dome_night.jpg"]
 
+initiate();
 
+function initiate() {
+  buttonlistener(".cta.darkmode",nightModeToggle);
+  checkSalutation()
+}
 
 function updateElement(elementClass,replaceContent){
 
@@ -87,3 +93,47 @@ function startAnimation(digitType) {
     var fadein_tween = TweenLite.from( 'span.digit.'+digitType, 1, {autoAlpha:.4, y: 7} );
 
   }
+
+
+  
+// Universal buttonlistener functions (had too many buttons to be checked, so I created one with 3 arguments)
+function buttonlistener(cssSelector,callFunction,functionArgument) {
+  document.querySelector(cssSelector).addEventListener("click", function(){
+  
+      callFunction(functionArgument);
+  
+  });
+}
+
+
+function nightModeToggle(){
+
+  if (nightModeActive == 0) {
+
+    document.querySelector('body').style.background = "url(assets/images/" + backgrounds[1]+")";
+    document.querySelector('body').style.backgroundSize = "cover"
+    nightModeActive=1;
+    checkSalutation();
+
+  }else {
+    document.querySelector('body').style.background = "url(assets/images/" + backgrounds[0]+")";
+    document.querySelector('body').style.backgroundSize = "cover"
+    nightModeActive=0;
+    checkSalutation();
+
+  }
+
+  
+
+}
+
+function checkSalutation() {
+
+  if (nightModeActive == 0) {
+    document.querySelector('.value_salutation').innerText = "Test";
+  }
+
+
+}
+
+
