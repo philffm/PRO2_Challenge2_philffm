@@ -220,3 +220,10 @@ p.digit.sep {
 .bubble p {
     color: white;
 }
+
+
+span.value_gmttimestring {
+    color: #ffffff00;
+    font-size: 1px;
+
+}

@@ -7,6 +7,9 @@ var timeInterval = setInterval(utcTime, 1000);
 var runtime = 0; 
 var nightModeActive = 0; 
 var currentVoiceBubble=0;
+var currentVoiceBubbleText = 0;
+
+
 
 
 backgrounds = ["dome.jpg", "dome_night.jpg"]
@@ -52,6 +55,8 @@ function utcTime() {
     updateElement('span.utcdigit.hours',hh);
     updateElement('span.utcdigit.minutes',mm);
     updateElement('span.utcdigit.seconds',ss);
+    updateElement('span.value_gmttimestring',hh+ ' '+ mm + "o clock");
+
 
   }
 
@@ -158,8 +163,12 @@ function voiceAssistantInit() {
 function voiceAssistantAction() {
  
   showElement("#"+voicebubbles[currentVoiceBubble]);
-  var audio = new Audio('assets/audio/'+voicebubbles[currentVoiceBubble]+'.mp3');
-  audio.play();
+  var currentVoiceBubbleText = document.querySelector("#"+voicebubbles[currentVoiceBubble]).innerText;
+  var msg = new SpeechSynthesisUtterance(currentVoiceBubbleText); window.speechSynthesis.speak(msg); 
+
+  /*var audio = new Audio('assets/audio/'+voicebubbles[currentVoiceBubble]+'.mp3');
+  audio.play(); */
+
   currentVoiceBubble+=1;
 
   if (currentVoiceBubble==3) {

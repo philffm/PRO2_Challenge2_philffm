@@ -219,3 +219,7 @@ p.digit.sep {
     text-align: center;
     margin: 20px;
 }
+
+span.value_gmttimestring {
+    color: #ffffff00;
+}
