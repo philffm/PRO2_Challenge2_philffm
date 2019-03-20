@@ -1,16 +1,4 @@
 
-body {
-	margin: 0;
-	background: url(../images/dome.jpg);
-	height: 100%;
-	line-height: 1.2;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-
 header,
 main,
 nav,
@@ -99,11 +87,9 @@ Header styles
 .flipclock {
     display: flex;
     margin: 20px auto;
-    background: #e0e0de42;
+    background: #0000004d;
     padding: 10px;
-    border-radius: 20px;
-    border-style: solid;
-     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
+    /* border-radius: 20px; */
 }
 
 .flipclock.small {
@@ -119,19 +105,18 @@ Header styles
 .infodisplay {
     display: flex;
     flex-direction: column;
-    background: #ffffff4a;
+    background: #83646424;
     width: 370px;
     height: 700px;
-    top:;
     margin: auto;
     border-radius: 20px;
-    color:white;
     border-style: solid;
+    color:rgb(0, 0, 0);
 }
 
 .flipclock p {
     font-size: 2.3em;
-    background: #000000c7;
+    background: black;
     margin: .1em;
     border-radius: 23px;
     border-color: white;
@@ -160,10 +145,7 @@ p.digit.sep {
     border: 5px solid #282121;
     border-radius: 2em;
 }
-.cta.darkmode a {
-    color: white;
-    border-color: white;
-}
+
 
 
 	.infopane .cta a {
@@ -171,10 +153,35 @@ p.digit.sep {
 		border-radius: 1em;
 		border-width: 3px;
 	}
-    .cta.darkmode a:hover {
+	
+
+     .cta .nightmode {
+		padding-bottom: 10px;
+    }
+    
+    .cta .daymode {
+        color: #ffffff;
+        
+	}
+    .cta .daymode a:hover {
+
+        background: #FFFF;
+        color: #000000;
+    }
+
+
+    .cta .darkmode {
+        color: #000;
+
+        
+	}
+    .cta .darkmode a:hover {
         
         background: rgb(0, 0, 0);
         color: #ffffff;
+    }.cta.darkmode a {
+        color: black;
+        border-color: black;
     }
     
 
@@ -191,8 +198,7 @@ p.digit.sep {
     padding: .7em;
     border: black;
     /* border-style: solid; */
-    background: #e0e0de42;
-    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.438);
+    background: #0000008c;
     flex-direction:;
     border-radius: 21px;
 }
@@ -210,12 +216,7 @@ p.digit.sep {
 
 }
 
+
 .bubble p {
-    color: black;
-}
-
-
-.btnVoice {
-    text-align: center;
-    margin: 20px;
+    color: white;
 }

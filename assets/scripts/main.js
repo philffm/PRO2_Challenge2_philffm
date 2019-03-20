@@ -6,14 +6,31 @@ var timeInterval = setInterval(utcTime, 1000);
 
 var runtime = 0; 
 var nightModeActive = 0; 
+var currentVoiceBubble=0;
+
 
 backgrounds = ["dome.jpg", "dome_night.jpg"]
+voicebubbles = ["bubble-1","bubble-2", "bubble-3", "bubble-4"]
 
 initiate();
 
 function initiate() {
   buttonlistener(".cta.darkmode",nightModeToggle);
-  checkSalutation()
+  document.querySelector('.bubble > p > span').innerText = "Goede dag!";
+  voiceAssistantInit();
+}
+
+
+function hideElement(elementClass) {
+
+  document.querySelector(elementClass).style.display = "none";
+  
+}
+
+function showElement(elementClass) {
+
+  document.querySelector(elementClass).style.display = "flex";
+  
 }
 
 function updateElement(elementClass,replaceContent){
@@ -55,7 +72,6 @@ function marsTime() {
     var j2000 = jd_tt - 2451545.0;
     var msd = (((j2000 - 4.5) / 1.027491252) + 44796.0 - 0.00096);
     var mtc = (24 * msd) % 24;
-    console.log(mtc);
 
     var x = mtc * 3600;
     var hh = Math.floor(x / 3600);
@@ -67,9 +83,8 @@ function marsTime() {
 
     var ss = Math.round(y % 60);
     if (ss < 10) ss = "0" + ss;
-    console.log(hh+'h'+ mm+'m'+ss+'s');
 
-    if (mm <= 1 || runtime==0) {
+    if (mm < 1 || runtime==0) {
       updateElement('span.digit.hours',hh);
       startAnimation('hours');
     }
@@ -83,7 +98,6 @@ function marsTime() {
 
 
     runtime =+1;
-    console.log(runtime)
 }
 
 
@@ -100,7 +114,7 @@ function startAnimation(digitType) {
 function buttonlistener(cssSelector,callFunction,functionArgument) {
   document.querySelector(cssSelector).addEventListener("click", function(){
   
-      callFunction(functionArgument);
+    callFunction(functionArgument);
   
   });
 }
@@ -113,13 +127,18 @@ function nightModeToggle(){
     document.querySelector('body').style.background = "url(assets/images/" + backgrounds[1]+")";
     document.querySelector('body').style.backgroundSize = "cover"
     nightModeActive=1;
-    checkSalutation();
+    LoadCSS("assets/styles/nightmode.css");
+    document.querySelector('.bubble > p > span').innerText = "Goedenavond!";
+
+
 
   }else {
     document.querySelector('body').style.background = "url(assets/images/" + backgrounds[0]+")";
     document.querySelector('body').style.backgroundSize = "cover"
     nightModeActive=0;
-    checkSalutation();
+    document.querySelector('head > link:nth-child(6)').remove();
+    document.querySelector('.bubble > p > span').innerText = "Goede dag!";
+
 
   }
 
@@ -127,13 +146,50 @@ function nightModeToggle(){
 
 }
 
-function checkSalutation() {
+function voiceAssistantInit() {
+  hideElement('#bubble-1');
+  hideElement('#bubble-2');
+  hideElement('#bubble-3');
+  hideElement('#bubble-4');
+  buttonlistener(".btnVoice",voiceAssistantAction);
+ 
+}
 
-  if (nightModeActive == 0) {
-    document.querySelector('.value_salutation').innerText = "Test";
+function voiceAssistantAction() {
+ 
+  showElement("#"+voicebubbles[currentVoiceBubble]);
+  var audio = new Audio('assets/audio/'+voicebubbles[currentVoiceBubble]+'.mp3');
+  audio.play();
+  currentVoiceBubble+=1;
+
+  if (currentVoiceBubble==3) {
+    showElement('#bubble-4')   
   }
+   
 
 
 }
 
 
+
+function LoadCSS(cssURL) {
+
+  // 'cssURL' is the stylesheet's URL, i.e. /css/styles.css
+
+  return new Promise( function( resolve, reject ) {
+
+      var link = document.createElement( 'link' );
+
+      link.rel  = 'stylesheet';
+
+      link.href = cssURL;
+
+      document.head.appendChild( link );
+
+      link.onload = function() { 
+
+          resolve(); 
+
+      };
+  } );
+}

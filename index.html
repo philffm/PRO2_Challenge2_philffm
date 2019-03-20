@@ -22,7 +22,7 @@ DONE ● Use animation in your clock.
 DONE ● Use DOM manipulation.
 DONE ● Usage of frameworks and libraries (other than TweenMax) are not allowed
 DONE ● Write the page in validated HTML5.
-TBD ● Make the clock interactive; e.g. theme switching.
+DONE ● Make the clock interactive; e.g. theme switching.
 TBD ● Make the design adapt according to the current time.
 DONE ● Show GMT: Greenwich Mean Time or other Earth time.
 ● (optional: Show Martian time TedX talk, Wikipedia article.)
@@ -58,6 +58,7 @@ modern look and feel.
 
   
 
+
     <main class="main-area">
 
         <div class="infodisplay">
@@ -75,25 +76,26 @@ modern look and feel.
 
 
             <div class="chatpanel">
-                <div class="bubble left" id="1">
+                <div class="bubble left" id="bubble-1">
                     <p> <span class="value_saluation">XXX</span> , where are you from?</p>
                     <img src="assets/images/alien.png" alt="">
-
+                    
                 </div>
 
-                <div class="bubble right" id="2">
+
+                <div class="bubble right" id="bubble-2">
                         <img src="assets/images/guy.png" alt="">
-                        <p>Amsterdam, Nederlands</p>
+                        <p>The Hague, Nederlands</p>
                         
 
     
                     </div>
-                    <div class="bubble left" id="3">
-                            <p>The time in Amsterdam, Nederlands:</p>
+                    <div class="bubble left" id="bubble-3">
+                            <p>Bitterballen time! The time in The Hague, Nederlands:</p>
                             <img src="assets/images/alien.png" alt="">
                         </div>
 
-                        <div class="flipclock small">
+                        <div class="flipclock small" id="bubble-4">
                                 <p><span class="utcdigit hours">XX</span></p>
                                 <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
                                 <p><span class="utcdigit minutes">XX</span></p>
@@ -102,7 +104,8 @@ modern look and feel.
                 
                             </div>
 
-                
+                            <div class="btnVoice"><a href="#"><img src="/assets/images/btnVoice.png" alt=""></a></div>
+
                 </div>
 
 
