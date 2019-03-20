@@ -207,7 +207,8 @@ p.digit.sep {
 
 .bubble img {
     margin: 0.2em;
-
+    width: auto;
+    height: 50px;
 }
 
 .bubble p {
@@ -222,4 +223,6 @@ p.digit.sep {
 
 span.value_gmttimestring {
     color: #ffffff00;
+    font-size: 1px;
+
 }

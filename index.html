@@ -39,13 +39,16 @@ modern look and feel.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The DOME</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata" >
+    <!-- Load the non-Comic Sans/TNR font --> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles/mystyle.css" type="text/css" media="all">
 </head>
 
+
+<!-- BODY --> 
 <body>
 
-
+    <!-- Header --> 
     <header class="masthead clear">
         <div class="site-header centered">
             <div class="spacex-branding">
@@ -60,11 +63,12 @@ modern look and feel.
 
 
     <main class="main-area">
-
+    <!-- Information display -->
         <div class="infodisplay">
             <div class="headline">
                 <h3>MUSKTOWN, MARS</h>
             </div>
+            <!-- Top Flip clock displating the current time on Mars -->
             <div class="flipclock">
                 <p><span class="digit hours">XX</span></p>
                 <p class="digit sep"><span class="digit sep"></span>:</p>
@@ -74,7 +78,7 @@ modern look and feel.
 
             </div>
 
-
+            <!-- Chatpanel area in which messages will pop up -->
             <div class="chatpanel">
                 <div class="bubble left" id="bubble-1">
                     <p> <span class="value_saluation">XXX</span> , where are you from?</p>
@@ -85,30 +89,28 @@ modern look and feel.
 
                 <div class="bubble right" id="bubble-2">
                         <img src="assets/images/guy.png" alt="">
-                        <p>The Hague, Nederlands</p>
-                        
-
-    
+                        <p>The Hague, Netherlands</p>
                     </div>
+
+                    <!-- Last bubble delivers both text and hidden text output, so the text-to-speech can read more than is visible -->
                     <div class="bubble left" id="bubble-3">
-                            <p>Bitterballen time! The time in The Hague, Nederlands is:<span class="value_gmttimestring" >XXX</span></p>
+                            <p>Bitterballen time! The time in The Hague, Netherlands is:<span class="value_gmttimestring" >XXX</span></p>
                             <img src="assets/images/alien.png" alt="">
                         </div>
 
+                        <!-- Small flipclock being used for the voice assistant output -->
                         <div class="flipclock small" id="bubble-4">
+                            <p><span class="utcdigit hours">XX</span></p>
+                            <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
+                            <p><span class="utcdigit minutes">XX</span></p>
+                            <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
+                            <p><span class="utcdigit seconds">XX</span></p>
+                        </div>
 
-                                <p><span class="utcdigit hours">XX</span></p>
-                                <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
-                                <p><span class="utcdigit minutes">XX</span></p>
-                                <p class="utcdigit sep"><span class="utcdigit sep"></span>:</p>
-                                <p><span class="utcdigit seconds">XX</span></p>
-                
-                            </div>
-
+                            <!-- Voice assistant button  -->
                             <div class="btnVoice"><a href="#"><img src="assets/images/btnVoice.png" alt=""></a></div>
 
                 </div>
-
 
         
         
@@ -122,6 +124,7 @@ modern look and feel.
 
        
     </main><!-- .main-area -->
+    
 
     <script src="assets/scripts/main.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
