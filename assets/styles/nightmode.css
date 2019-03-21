@@ -140,7 +140,7 @@ p.digit.sep {
     padding: 0.25em 0.75em;
     font-size: 1em;
     font-weight: 900;
-    color: #282121;
+    color: #ffffff;
     text-decoration: none;
     border: 5px solid #282121;
     border-radius: 2em;
@@ -182,6 +182,7 @@ p.digit.sep {
     }.cta.darkmode a {
         color: black;
         border-color: black;
+        background: #ffffff70
     }
     
 
